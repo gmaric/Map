@@ -1,0 +1,123 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#map-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background-color: #ffffff;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.map-logo {
+    position: absolute;
+    left: 20px;
+    height: 36px;
+    width: auto;
+}
+
+#map {
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+.ol-control>* {
+    background-color: #f8f8f8 !important;
+    color: #444444 !important;
+    border-radius: 0px;
+}
+
+.ol-attribution a,
+.gcd-gl-input::placeholder,
+.search-layer-input-search::placeholder {
+    color: #444444 !important;
+}
+
+.search-layer-input-search {
+    background-color: #f8f8f8 !important;
+}
+
+.ol-control>*:focus,
+.ol-control>*:hover {
+    background-color: rgba(248, 248, 248, 0.7) !important;
+}
+
+.ol-control {
+    background-color: rgba(255, 255, 255, .4) !important;
+    padding: 2px !important;
+}
+
+.ol-popup {
+    max-width: 90vw;
+    /* use screen width on mobile */
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: #888;
+}
+
+.ol-popup-closer:hover {
+    color: #000;
+}
+
+.layer-switcher {
+    max-width: 90vw;
+    font-size: 1rem;
+}
+
+.layer-switcher button,
+.layer-switcher input[type="checkbox"] {
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+.layer-switcher label {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #map {
+        height: 50vh;
+    }
+
+    .ol-control>* {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    .layer-switcher {
+        font-size: 0.9rem;
+    }
+}
